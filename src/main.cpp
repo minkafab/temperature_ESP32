@@ -26,10 +26,10 @@ int thermoDO = 19;
 int thermoCS = 23;
 int thermoCLK = 5;
 
-const char usertopic[20] = "/9nuN1njcjg";
-const char sensorusertopic[20] = "/9nuN1njcjg/sensor/";
+const char usertopic[20] = "/eyOn1njcjb";
+const char sensorusertopic[20] = "/eyOn1njcjb/sensor/";
 char mqtt_server[20] = "m2mlight.com";
-const char sens_apikey[15] = "gRpj1njcse";
+const char sens_apikey[15] = "YrLj1njcso";
 long lastReconnectAttempt = 0;
 float sum = 0;
 int count_samples = 0;
@@ -46,7 +46,7 @@ t t_sampling = {0,  5 * 1000}; // Run every x miliseconds
 boolean reconnect()
 {
   Serial.print(F("Attempting MQTT connection..."));
-  if (client.connect("termocupla", "mqtt", "m2mlight12"))
+  if (client.connect("termocupla1EPICO", "mqtt", "m2mlight12"))
   {
     Serial.println(F("connected"));
     client.subscribe(usertopic);
